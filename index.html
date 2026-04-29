@@ -61,25 +61,21 @@
       }
     
       .header-cover img {
-        /* --- 修正重點 1：自動縮放與 Contain --- */
+        /* --- 修正重點：改為自動縮放與 Contain --- */
         width: auto; 
         height: auto;
         max-width: 90%;
         max-height: 95%;
         
-        object-fit: contain;
+        object-fit: contain; /* 關鍵：讓整張照片完整顯示，不被裁切 */
         object-position: bottom center;
         
         /* 保留原本樣式 */
         border-radius: 20px;
         border: 4px solid rgba(255,255,255,0.2);
         box-shadow: 0 15px 40px rgba(0,0,0,0.4);
+        transform: translateY(10px);
         z-index: 2;
-        
-        /* --- 修正重點 2：加入旋轉效果 --- */
-        /* translateY(10px) 是原本的下移效果 */
-        /* rotate(-5deg) 是向左旋轉 5 度 */
-        transform: translateY(10px) rotate(-5deg); 
       }
     
       /* --- 資訊卡片 --- */
@@ -208,7 +204,7 @@
     <div class="profile-header">
       <div class="badge-crown">🏆 專業傳承規劃+公益</div> 
       
-      <h1>蘇玉雯</h1>
+      <h1>張添盛</h1>
       <div class="job-title">首席經理｜資產傳承專家</div>
       <div class="company">永達保險經紀人</div>
       <div class="tags-row">
@@ -245,7 +241,7 @@
   
   <div class="floating-footer">
     <a href="tel:0988354250" class="btn btn-call">
-       📞0988-354250
+       📞 0988-354250
     </a>
     
     <a href="https://line.me/ti/p/en9UrNT9eA" class="btn btn-line">
